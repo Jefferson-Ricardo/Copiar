@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Login
 {
@@ -128,6 +129,19 @@ namespace Login
             string diretorioDestino = padrao + tb_logado.Text + separador + mesAtual + separador + tb_nomeCliente.Text + separador + servico;
             
             CopiarEstrutura(diretorioOrigem, diretorioDestino, true);
+            MessageBox.Show("Arquivo copiado com sucesso!");
+            limpaCampo();
+        }
+
+        //Limpar os campos apos a copia dos arquivos
+        private void limpaCampo()
+        {
+            tb_numCalculo.Text = "";
+            tb_nomeCliente.Text = "";
+            tb_tipoOP.Text = "";
+            tb_produto.Text = "";
+            tb_titulo.Text = "";
+            tb_numOP.Text = "";
         }
 
         private static void CopiarEstrutura(string diretorioOrigem, string diretorioDestino, bool copySubDirs)
@@ -136,6 +150,7 @@ namespace Login
             DirectoryInfo dir = new DirectoryInfo(diretorioOrigem);
             try
             {
+                //Se nao existe o diretorio, cria
                 if (!dir.Exists)
                 {
                     throw new DirectoryNotFoundException(
@@ -168,12 +183,14 @@ namespace Login
                         CopiarEstrutura(subdir.FullName, temppath, copySubDirs);
                     }
                 }
-            } catch(Exception e)
+                
+
+            } catch(Exception)
             {
                 MessageBox.Show("Estrutura não localizada!");
             }
-            
 
+            
 
         }
     }
