@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculo));
             this.lbl_numCalculo = new System.Windows.Forms.Label();
             this.tb_numCalculo = new System.Windows.Forms.TextBox();
-            this.btn_copiar = new System.Windows.Forms.Button();
             this.tb_logado = new System.Windows.Forms.TextBox();
             this.lbl_logado = new System.Windows.Forms.Label();
             this.tb_titulo = new System.Windows.Forms.TextBox();
@@ -44,6 +44,7 @@
             this.tb_tipoOP = new System.Windows.Forms.TextBox();
             this.lbl_tipoOP = new System.Windows.Forms.Label();
             this.btn_buscar = new System.Windows.Forms.Button();
+            this.btn_copiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_numCalculo
@@ -61,16 +62,6 @@
             this.tb_numCalculo.Name = "tb_numCalculo";
             this.tb_numCalculo.Size = new System.Drawing.Size(57, 20);
             this.tb_numCalculo.TabIndex = 1;
-            // 
-            // btn_copiar
-            // 
-            this.btn_copiar.Location = new System.Drawing.Point(279, 13);
-            this.btn_copiar.Name = "btn_copiar";
-            this.btn_copiar.Size = new System.Drawing.Size(82, 38);
-            this.btn_copiar.TabIndex = 2;
-            this.btn_copiar.Text = "Copiar";
-            this.btn_copiar.UseVisualStyleBackColor = true;
-            this.btn_copiar.Click += new System.EventHandler(this.btn_copiar_Click);
             // 
             // tb_logado
             // 
@@ -96,7 +87,7 @@
             this.tb_titulo.BackColor = System.Drawing.SystemColors.Control;
             this.tb_titulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_titulo.Enabled = false;
-            this.tb_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_titulo.Location = new System.Drawing.Point(152, 130);
             this.tb_titulo.Name = "tb_titulo";
             this.tb_titulo.Size = new System.Drawing.Size(209, 13);
@@ -116,7 +107,7 @@
             this.tb_produto.BackColor = System.Drawing.SystemColors.Control;
             this.tb_produto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_produto.Enabled = false;
-            this.tb_produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_produto.Location = new System.Drawing.Point(19, 130);
             this.tb_produto.Name = "tb_produto";
             this.tb_produto.Size = new System.Drawing.Size(111, 13);
@@ -136,7 +127,7 @@
             this.tb_numOP.BackColor = System.Drawing.SystemColors.Control;
             this.tb_numOP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_numOP.Enabled = false;
-            this.tb_numOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_numOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_numOP.Location = new System.Drawing.Point(79, 86);
             this.tb_numOP.Name = "tb_numOP";
             this.tb_numOP.Size = new System.Drawing.Size(51, 13);
@@ -156,7 +147,7 @@
             this.tb_nomeCliente.BackColor = System.Drawing.SystemColors.Control;
             this.tb_nomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_nomeCliente.Enabled = false;
-            this.tb_nomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_nomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_nomeCliente.Location = new System.Drawing.Point(152, 86);
             this.tb_nomeCliente.Name = "tb_nomeCliente";
             this.tb_nomeCliente.Size = new System.Drawing.Size(209, 13);
@@ -176,7 +167,7 @@
             this.tb_tipoOP.BackColor = System.Drawing.SystemColors.Control;
             this.tb_tipoOP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_tipoOP.Enabled = false;
-            this.tb_tipoOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_tipoOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_tipoOP.Location = new System.Drawing.Point(16, 86);
             this.tb_tipoOP.Name = "tb_tipoOP";
             this.tb_tipoOP.Size = new System.Drawing.Size(57, 13);
@@ -193,13 +184,29 @@
             // 
             // btn_buscar
             // 
+            this.btn_buscar.Image = global::Login.Properties.Resources.find;
+            this.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_buscar.Location = new System.Drawing.Point(191, 13);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(82, 38);
             this.btn_buscar.TabIndex = 28;
             this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
+            // btn_copiar
+            // 
+            this.btn_copiar.Image = global::Login.Properties.Resources.copy;
+            this.btn_copiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_copiar.Location = new System.Drawing.Point(279, 13);
+            this.btn_copiar.Name = "btn_copiar";
+            this.btn_copiar.Size = new System.Drawing.Size(82, 38);
+            this.btn_copiar.TabIndex = 2;
+            this.btn_copiar.Text = "Copiar";
+            this.btn_copiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_copiar.UseVisualStyleBackColor = true;
+            this.btn_copiar.Click += new System.EventHandler(this.btn_copiar_Click);
             // 
             // Calculo
             // 
@@ -222,11 +229,11 @@
             this.Controls.Add(this.btn_copiar);
             this.Controls.Add(this.tb_numCalculo);
             this.Controls.Add(this.lbl_numCalculo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Calculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculo";
-
             this.ResumeLayout(false);
             this.PerformLayout();
 

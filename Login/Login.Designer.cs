@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaLogin));
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.tb_usuario = new System.Windows.Forms.TextBox();
             this.lbl_senha = new System.Windows.Forms.Label();
             this.tb_senha = new System.Windows.Forms.TextBox();
-            this.bt_entrar = new System.Windows.Forms.Button();
             this.bt_cancel = new System.Windows.Forms.Button();
+            this.bt_entrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_usuario
@@ -69,18 +70,10 @@
             this.tb_senha.Size = new System.Drawing.Size(192, 20);
             this.tb_senha.TabIndex = 3;
             // 
-            // bt_entrar
-            // 
-            this.bt_entrar.Location = new System.Drawing.Point(138, 124);
-            this.bt_entrar.Name = "bt_entrar";
-            this.bt_entrar.Size = new System.Drawing.Size(75, 23);
-            this.bt_entrar.TabIndex = 4;
-            this.bt_entrar.Text = "Entrar";
-            this.bt_entrar.UseVisualStyleBackColor = true;
-            this.bt_entrar.Click += new System.EventHandler(this.bt_entrar_Click);
-            // 
             // bt_cancel
             // 
+            this.bt_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bt_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_cancel.Location = new System.Drawing.Point(52, 124);
             this.bt_cancel.Name = "bt_cancel";
             this.bt_cancel.Size = new System.Drawing.Size(75, 23);
@@ -88,6 +81,17 @@
             this.bt_cancel.Text = "Cancelar";
             this.bt_cancel.UseVisualStyleBackColor = true;
             this.bt_cancel.Click += new System.EventHandler(this.bt_cancel_Click);
+            // 
+            // bt_entrar
+            // 
+            this.bt_entrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_entrar.Location = new System.Drawing.Point(138, 124);
+            this.bt_entrar.Name = "bt_entrar";
+            this.bt_entrar.Size = new System.Drawing.Size(75, 23);
+            this.bt_entrar.TabIndex = 4;
+            this.bt_entrar.Text = "Entrar";
+            this.bt_entrar.UseVisualStyleBackColor = true;
+            this.bt_entrar.Click += new System.EventHandler(this.bt_entrar_Click);
             // 
             // telaLogin
             // 
@@ -101,6 +105,7 @@
             this.Controls.Add(this.tb_usuario);
             this.Controls.Add(this.lbl_usuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "telaLogin";

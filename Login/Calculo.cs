@@ -112,6 +112,9 @@ namespace Login
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
+
+
+
             // Cria variavel do numero do calculo
             int calculo = int.Parse(tb_numCalculo.Text);
 
