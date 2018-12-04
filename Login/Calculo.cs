@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using System.Text.RegularExpressions;
+using MySql.Data.MySqlClient;
+
 
 namespace Login
 {
@@ -27,6 +29,8 @@ namespace Login
             public string titulo { get; set; }
         }
         
+
+
         // Instância da Conexão
         SqlConnection sqlConn = null;
         private string strConn = "Data Source=GESTAODAINFOR11;Initial Catalog=Pre;Integrated Security=True";
